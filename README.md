@@ -25,11 +25,11 @@ pytest
 This command runs all the unit tests and ensures that any changes made haven't introduced new issues.
 
 ## 🛠️ File Structure
-src/main.py: Contains the primary function greet which returns a greeting message.
-tests/test_main.py: Holds unit tests for the greet function.
-requirements.txt: Specifies the Python dependencies required for this project.
-.devcontainer: Configurations for the VS Code remote container development environment.
-.github/workflows/main.yml: Workflow definitions for Continuous Integration using GitHub Actions.
+* src/main.py: Contains the primary function greet which returns a greeting message.
+* tests/test_main.py: Holds unit tests for the greet function.
+* requirements.txt: Specifies the Python dependencies required for this project.
+* .devcontainer: Configurations for the VS Code remote container development environment.
+* .github/workflows/main.yml: Workflow definitions for Continuous Integration using GitHub Actions.
 
 ## ✨ Contributing
 Fork the repository.
