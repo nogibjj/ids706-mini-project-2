@@ -23,8 +23,8 @@ pytest
 ```
 
 ## 🛠️ File Structure
-* main.py: Contains the primary function greet which returns a greeting message.<br>
-* test_main.py: Contains the unit tests for the greet function.<br>
+* src/main.py: Contains the primary function greet which returns a greeting message.<br>
+* tests/test_main.py: Contains the unit tests for the greet function.<br>
 * requirements.txt: Lists the Python dependencies required by the project.<br>
 * .devcontainer: Contains the configuration for the VS Code remote container development.<br>
 * .github/workflows/main.yml: Contains the GitHub Actions workflow for Continuous Integration.<br>
