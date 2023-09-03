@@ -33,4 +33,4 @@ To run tests, execute the following command:
 4. Run tests to ensure your changes do not introduce bugs. <br>
 5. Submit a pull request.<br>
 
-_ _This README is organized to give an overview of the project, guide on how to use the **.devcontainer**, detail how to run tests, and provide a brief on how to contribute. You can expand upon or modify any sections as per your project's requirements._ _
+_This README is organized to give an overview of the project, guide on how to use the **.devcontainer**, detail how to run tests, and provide a brief on how to contribute. You can expand upon or modify any sections as per your project's requirements._
