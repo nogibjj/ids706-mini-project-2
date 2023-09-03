@@ -2,7 +2,7 @@
 
 This is a basic Python template with CI setup.
 
-![Python CI](https://github.com//aghakishiyeva/ids706-python-template/actions/workflows/main.yml/badge.svg)
+![Python CI](https://github.com/aghakishiyeva/ids706-python-template/actions/workflows/main.yml/badge.svg)
 
 ## Development
 
