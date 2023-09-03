@@ -2,9 +2,9 @@
 
 ![Python CI](https://github.com/aghakishiyeva/ids706-python-template/actions/workflows/main.yml/badge.svg)
 
-This is a basic Python template with CI setup using GitHub Actions. It also provides a .devcontainer setup for seamless development inside a Docker container with Visual Studio Code.
+This is a basic Python template with CI setup using GitHub Actions. It also provides a **.devcontainer** setup for seamless development inside a Docker container with Visual Studio Code.
 
-## Getting Started
+## 🚀 Getting Started
 ### Local Development with VS Code and .devcontainer
 1. Ensure you have <u>Docker</u> installed and running on your machine.<br>
 2. Install the <u>Remote - Containers</u> extension in VS Code.<br>
@@ -14,19 +14,24 @@ This is a basic Python template with CI setup using GitHub Actions. It also prov
 6. Once inside, you'll have a Python environment ready to go, isolated from your local machine.
 
    
-### Running Tests
-To run tests, execute the following command:
+### 🧪 Running Tests
+
+To run tests in this project, use the following command:
+
+```bash
+pytest
+```
 
 **__pytest__**
 
-## File Structure
+## 🛠️ File Structure
 * main.py: Contains the primary function greet which returns a greeting message.<br>
 * test_main.py: Contains the unit tests for the greet function.<br>
 * requirements.txt: Lists the Python dependencies required by the project.<br>
 * .devcontainer: Contains the configuration for the VS Code remote container development.<br>
 * .github/workflows/main.yml: Contains the GitHub Actions workflow for Continuous Integration.<br>
 
-## Contributing
+## ✨ Contributing
 1. Fork the repository. <br>
 2. Create a new branch for your changes. <br>
 3. Make your changes. <br>
