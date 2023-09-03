@@ -22,8 +22,6 @@ To run tests in this project, use the following command:
 pytest
 ```
 
-**__pytest__**
-
 ## 🛠️ File Structure
 * main.py: Contains the primary function greet which returns a greeting message.<br>
 * test_main.py: Contains the unit tests for the greet function.<br>
