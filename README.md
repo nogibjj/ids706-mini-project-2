@@ -38,6 +38,6 @@ This command runs all the unit tests and ensures that any changes made haven't i
 4. Run tests using pytest to ensure no new bugs have been introduced.<br>
 5. Submit a pull request detailing your changes.
 
-*_This README provides an overview of the project, guides on the .devcontainer usage, instructions on running tests, and outlines the contribution process. Modify or expand sections as needed for your project's specific requirements._*
+*_This README provides an overview of the project, guides on the .devcontainer usage, instructions on running tests, file structure and outlines the contribution process. Modify or expand sections as needed for your project's specific requirements._*
 
 
