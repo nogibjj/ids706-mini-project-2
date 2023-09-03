@@ -1,6 +1,6 @@
 # Python GitHub Template
 
-![Python CI](https://github.com/aghakishiyeva/ids706-python-template/actions/workflows/main.yml/badge.svg)
+![Python CI](https://github.com/aghakishiyeva/ids706-mini-project-1/actions/workflows/main.yml/badge.svg)
 
 This is a basic Python template with CI setup using GitHub Actions. It also provides a **.devcontainer** setup for seamless development inside a Docker container with Visual Studio Code.
 
