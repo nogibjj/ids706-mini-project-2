@@ -5,7 +5,7 @@
 This is a basic Python template with CI setup using GitHub Actions. It also provides a **.devcontainer** setup for seamless development inside a Docker container with Visual Studio Code.
 
 ## 🚀 Getting Started
-### Local Development with <u>VS Code</u> and  <u>.devcontainer</u>
+### Local Development with VS Code and  .devcontainer
 1. Ensure you have <u>Docker</u> installed and running on your machine.<br>
 2. Install the <u>Remote - Containers</u> extension in VS Code.<br>
 3. Open the repository in VS Code.<br>
