@@ -32,11 +32,11 @@ This command runs all the unit tests and ensures that any changes made haven't i
 * .github/workflows/main.yml: Workflow definitions for Continuous Integration using GitHub Actions.
 
 ## ✨ Contributing
-Fork the repository.
-Create a new branch for your contributions.
-Implement your changes.
-Run tests using pytest to ensure no new bugs have been introduced.
-Submit a pull request detailing your changes.
+1. Fork the repository.<br>
+2. Create a new branch for your contributions.<br>
+3. Implement your changes.<br>
+4. Run tests using pytest to ensure no new bugs have been introduced.<br>
+5. Submit a pull request detailing your changes.
 
 *_This README provides an overview of the project, guides on the .devcontainer usage, instructions on running tests, and outlines the contribution process. Modify or expand sections as needed for your project's specific requirements._*
 
