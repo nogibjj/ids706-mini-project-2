@@ -1,7 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def read_dataset(file_path):
+def read_dataset(file_path: str) -> pd.DataFrame:
+    
     if file_path.endswith('.csv'):
         data = pd.read_csv(file_path)
     elif file_path.endswith('.xlsx'):
@@ -11,17 +12,29 @@ def read_dataset(file_path):
     
     return data
 
-def generate_summary_statistics(data):
-    mean = data.mean()
-    median = data.median()
-    std_dev = data.std()
+def generate_summary_statistics(data: pd.DataFrame) -> dict:
 
-    with open('summary_report.md', 'w') as f:
-        f.write(f"# Summary Report\n")
-        f.write(f"## Mean\n{mean}\n")
-        f.write(f"## Median\n{median}\n")
-        f.write(f"## Standard Deviation\n{std_dev}\n")
+    if data is None or data.empty:
+        raise ValueError("Data cannot be None or empty")
 
-def create_data_visualization(data):
+    summary = {
+        "mean": data.mean().to_dict(),
+        "median": data.median().to_dict(),
+        "std_dev": data.std().to_dict()
+    }
+
+    return summary
+
+def create_data_visualization(data: pd.DataFrame, file_path: str = 'data_visualization.png') -> None:
+
+    if data is None or data.empty:
+        raise ValueError("Data cannot be None or empty")
+
     data.hist()
-    plt.savefig('data_visualization.png')
+    plt.savefig(file_path)
+
+if __name__ == "__main__":
+    data = read_dataset('winequality-red.csv')  # replace with your actual data file path
+    summary = generate_summary_statistics(data)
+    create_data_visualization(data, 'output/data_visualization.png')
+    print(summary)
