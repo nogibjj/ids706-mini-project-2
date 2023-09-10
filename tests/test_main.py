@@ -25,7 +25,7 @@ def test_create_data_visualization():
     output_dir = 'output'
     os.makedirs(output_dir, exist_ok=True)
     
-    data = read_dataset('path/to/sample.csv')
+    data = read_dataset('test.csv')
     output_file = 'output/test_data_visualization.png'
     create_data_visualization(data, output_file)
     assert os.path.isfile(output_file)
