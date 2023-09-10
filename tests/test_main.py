@@ -3,12 +3,12 @@ from src.main import read_dataset, generate_summary_statistics
 
 def test_read_dataset():
 
-    data = read_dataset('test_data.csv')
+    data = read_dataset('test.csv')
     assert isinstance(data, pd.DataFrame)
     assert not data.empty
 
     try:
-        read_dataset('test_data.txt')
+        read_dataset('test.txt')
         assert False, "Expected ValueError, but got no error"
     except ValueError as e:
         assert str(e) == "Unsupported file type"
