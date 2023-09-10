@@ -22,6 +22,9 @@ def test_generate_summary_statistics():
         assert str(e) == "Data cannot be None or empty"
 
 def test_create_data_visualization():
+    output_dir = 'output'
+    os.makedirs(output_dir, exist_ok=True)
+    
     data = read_dataset('path/to/sample.csv')
     output_file = 'output/test_data_visualization.png'
     create_data_visualization(data, output_file)
