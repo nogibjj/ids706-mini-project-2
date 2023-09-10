@@ -1,20 +1,27 @@
 import pandas as pd
-from typing import Union, Dict
+import matplotlib.pyplot as plt
 
-def describe_data(data: Union[pd.DataFrame, Dict]) -> pd.DataFrame:
-    """Returns the descriptive statistics of the dataset."""
+def read_dataset(file_path):
+    if file_path.endswith('.csv'):
+        data = pd.read_csv(file_path)
+    elif file_path.endswith('.xlsx'):
+        data = pd.read_excel(file_path)
+    else:
+        raise ValueError("Unsupported file type")
     
-    if isinstance(data, Dict):
-        data = pd.DataFrame(data)
-    
-    return data.describe()
+    return data
 
-if __name__ == "__main__":
+def generate_summary_statistics(data):
+    mean = data.mean()
+    median = data.median()
+    std_dev = data.std()
 
-    sample_data = {
-        "A": [1, 2, 3, 4, 5],
-        "B": [5, 4, 3, 2, 1],
-        "C": [2, 3, 4, 3, 2]
-    }
-    df = pd.DataFrame(sample_data)
-    print(describe_data(df))
+    with open('summary_report.md', 'w') as f:
+        f.write(f"# Summary Report\n")
+        f.write(f"## Mean\n{mean}\n")
+        f.write(f"## Median\n{median}\n")
+        f.write(f"## Standard Deviation\n{std_dev}\n")
+
+def create_data_visualization(data):
+    data.hist()
+    plt.savefig('data_visualization.png')
