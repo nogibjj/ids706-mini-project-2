@@ -1,16 +1,27 @@
 import pandas as pd
-from src.main import describe_data
+from src.main import read_dataset, generate_summary_statistics
 
-def test_describe_data():
-    data = {
-        "A": [1, 2, 3],
-        "B": [3, 2, 1]
-    }
-    df = pd.DataFrame(data)
+def test_read_dataset():
+
+    data = read_dataset('test_data.csv')
+    assert isinstance(data, pd.DataFrame)
+    assert not data.empty
+
+    try:
+        read_dataset('test_data.txt')
+        assert False, "Expected ValueError, but got no error"
+    except ValueError as e:
+        assert str(e) == "Unsupported file type"
+
+def test_generate_summary_statistics():
+    data = pd.DataFrame({'a': [1, 2, 3], 'b': [4, 5, 6]})
+    summary = generate_summary_statistics(data)
     
-    result = describe_data(df)
-    
-    assert result.loc['mean', 'A'] == 2.0
-    assert result.loc['mean', 'B'] == 2.0
-    assert result.loc['min', 'A'] == 1.0
-    assert result.loc['min', 'B'] == 1.0
+    assert summary['mean']['a'] == 2.0
+    assert summary['median']['b'] == 5.0
+
+    try:
+        generate_summary_statistics(pd.DataFrame())
+        assert False, "Expected ValueError, but got no error"
+    except ValueError as e:
+        assert str(e) == "Data cannot be None or empty"
