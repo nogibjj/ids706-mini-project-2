@@ -1,6 +1,6 @@
 # Python Data Analysis Project
 
-![Python CI](https://github.com/your-github-username/your-repo-name/actions/workflows/main.yml/badge.svg)
+![Python CI](https://github.com/nogibjj/ids706-mini-project-2/actions/workflows/main.yml/badge.svg)
 
 This project is focused on data analysis utilizing a Python setup with CI/CD implemented through GitHub Actions. It comes with a **.devcontainer** setup for streamlined development within a Docker container using Visual Studio Code.
 
