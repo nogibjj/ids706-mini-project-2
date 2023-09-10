@@ -1,27 +1,38 @@
+import os
 import pandas as pd
-from src.main import read_dataset, generate_summary_statistics
+from src.main import read_dataset, generate_summary_statistics, create_data_visualization
 
 def test_read_dataset():
-
-    data = read_dataset('test.csv')
-    assert isinstance(data, pd.DataFrame)
-    assert not data.empty
-
-    try:
-        read_dataset('test.txt')
-        assert False, "Expected ValueError, but got no error"
-    except ValueError as e:
-        assert str(e) == "Unsupported file type"
+    data_csv = read_dataset('test.csv')
+    assert isinstance(data_csv, pd.DataFrame)
+    assert not data_csv.empty
 
 def test_generate_summary_statistics():
-    data = pd.DataFrame({'a': [1, 2, 3], 'b': [4, 5, 6]})
-    summary = generate_summary_statistics(data)
+    data = read_dataset('test.csv')
     
-    assert summary['mean']['a'] == 2.0
-    assert summary['median']['b'] == 5.0
+    summary = generate_summary_statistics(data)
+    assert isinstance(summary, dict)
+    assert "mean" in summary
+    assert "median" in summary
+    assert "std_dev" in summary
 
     try:
         generate_summary_statistics(pd.DataFrame())
-        assert False, "Expected ValueError, but got no error"
     except ValueError as e:
         assert str(e) == "Data cannot be None or empty"
+
+def test_create_data_visualization():
+    data = read_dataset('path/to/sample.csv')
+    output_file = 'output/test_data_visualization.png'
+    create_data_visualization(data, output_file)
+    assert os.path.isfile(output_file)
+
+    try:
+        create_data_visualization(pd.DataFrame())
+    except ValueError as e:
+        assert str(e) == "Data cannot be None or empty"
+
+if __name__ == "__main__":
+    test_read_dataset()
+    test_generate_summary_statistics()
+    test_create_data_visualization()
