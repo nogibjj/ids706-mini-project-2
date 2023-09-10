@@ -16,7 +16,7 @@ This is a basic Python template with CI setup using GitHub Actions. It also prov
 
 ### 🧪 Running Tests
 
-To run tests in this project, use the following command:
+To run tests in this project, use the following command:.
 
 ```bash
 pytest
