@@ -1,22 +1,23 @@
-# Python GitHub Template
+# Python Data Analysis Project
 
-![Python CI](https://github.com/nogibjj/ids706-mini-project-2/actions/workflows/main.yml/badge.svg)
+![Python CI](https://github.com/your-github-username/your-repo-name/actions/workflows/main.yml/badge.svg)
 
-This is a basic Python template with CI setup using GitHub Actions. It also provides a **.devcontainer** setup for seamless development inside a Docker container with Visual Studio Code..
+This project is focused on data analysis utilizing a Python setup with CI/CD implemented through GitHub Actions. It comes with a **.devcontainer** setup for streamlined development within a Docker container using Visual Studio Code.
 
 ## 🚀 Getting Started
+
 ### Local Development with VS Code and .devcontainer
-1. Ensure you have **Docker** installed and running on your machine.
+1. Ensure **Docker** is installed and running on your machine.
 2. Install the **Remote - Containers** extension in VS Code.
-3. Clone the repository onto your local machine.
+3. Clone the repository to your local machine.
 4. Open the repository in VS Code.
-5. A notification will pop up suggesting you reopen the project in a container. Click on "Reopen in Container". (Alternatively, you can press **F1**, type "Remote-Containers: Reopen Folder in Container", and press Enter.)
-6. The first time you do this, Docker will build an image based on the provided **Dockerfile**. This may take a few minutes.
-7. Once inside the container, you'll have a ready-to-use Python environment, isolated from your local system.
+5. A notification will appear suggesting you reopen the project in a container. Click "Reopen in Container". (Alternatively, press **F1**, type "Remote-Containers: Reopen Folder in Container", and press Enter.)
+6. Initially, Docker will build an image based on the defined **Dockerfile**. This step might take a few minutes.
+7. Once inside the container, a Python environment, isolated from your local system, is prepared for your use.
 
 ### 🧪 Running Tests
 
-To run tests in this project, use the following command:.
+To initiate tests in this project, execute the following command:
 
 ```bash
 pytest
@@ -25,11 +26,13 @@ pytest
 This command runs all the unit tests and ensures that any changes made haven't introduced new issues.
 
 ## 🛠️ File Structure
-* src/main.py: Contains the primary function greet which returns a greeting message.
-* tests/test_main.py: Holds unit tests for the greet function.
-* requirements.txt: Specifies the Python dependencies required for this project.
-* .devcontainer: Configurations for the VS Code remote container development environment.
-* .github/workflows/main.yml: Workflow definitions for Continuous Integration using GitHub Actions.
+* src/main.py: The central script housing functions such as read_dataset, generate_summary_statistics, and create_data_visualization.
+* src/winequality-red.csv: A dataset file utilized within the project.
+* tests/test_main.py: Includes unit tests for the functions defined in main.py.
+* tests/test.csv: A CSV file used for testing purposes.
+* requirements.txt: Lists the Python dependencies necessary for this project.
+* .devcontainer: Contains configurations for the VS Code remote container development setup.
+* .github/workflows/main.yml: Describes the workflow procedures for Continuous Integration using GitHub Actions.
 
 ## ✨ Contributing
 1. Fork the repository.<br>
