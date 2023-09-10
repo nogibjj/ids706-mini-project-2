@@ -34,6 +34,9 @@ def create_data_visualization(data: pd.DataFrame, file_path: str = 'data_visuali
     plt.savefig(file_path)
 
 if __name__ == "__main__":
+    output_dir = 'output'
+    os.makedirs(output_dir, exist_ok=True)
+
     data = read_dataset('winequality-red.csv') 
     summary = generate_summary_statistics(data)
     create_data_visualization(data, 'output/data_visualization.png')
