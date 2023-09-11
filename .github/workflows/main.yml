@@ -27,15 +27,14 @@ jobs:
       run: pytest tests/
       
     - name: Run main script
-      run: python main.py
-      working-directory: src
+      run: python src/main.py
 
     - name: Upload output files
       uses: actions/upload-artifact@v2
       if: always()
       with:
         name: output-files
-        path: src/output/*
+        path: output/*
 
     - name: List files
       run: |
