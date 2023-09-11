@@ -31,12 +31,14 @@ def test_create_data_visualization():
     assert os.path.isfile(output_file)
 
     try:
-        create_data_visualization(pd.DataFrame())
+        create_data_visualization(pd.DataFrame(), 'output/test_data_visualization_fail.png')
     except ValueError as e:
         assert str(e) == "Data cannot be None or empty"
 
     if os.path.isfile(output_file):
         os.remove(output_file)
+    if os.path.isfile('output/test_data_visualization_fail.png'):
+        os.remove('output/test_data_visualization_fail.png')
 
 if __name__ == "__main__":
     test_read_dataset()
