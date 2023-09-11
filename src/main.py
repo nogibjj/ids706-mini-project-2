@@ -47,7 +47,7 @@ if __name__ == "__main__":
     output_dir = 'output'
     os.makedirs(output_dir, exist_ok=True)
 
-    data = read_dataset('winequality-red.csv') 
+    data = read_dataset('src/winequality-red.csv') 
     summary = generate_summary_statistics(data)
     create_data_visualization(data, 'output/data_visualization.png')
     save_summary_to_markdown(summary)
