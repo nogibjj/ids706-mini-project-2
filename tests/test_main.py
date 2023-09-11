@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from main import read_dataset, generate_summary_statistics, create_data_visualization
+from src.main import read_dataset, generate_summary_statistics, create_data_visualization
 
 def test_read_dataset():
     data_csv = read_dataset('tests/test.csv')
