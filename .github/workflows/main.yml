@@ -32,9 +32,10 @@ jobs:
 
     - name: Upload output files
       uses: actions/upload-artifact@v2
+      if: always()
       with:
         name: output-files
-        path: src/output/
+        path: src/output/*
 
     - name: List files
       run: |
