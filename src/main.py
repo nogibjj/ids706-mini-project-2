@@ -3,7 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def read_dataset(file_path: str) -> pd.DataFrame:
-    
     if file_path.endswith('.csv'):
         data = pd.read_csv(file_path)
     elif file_path.endswith('.xlsx'):
@@ -14,7 +13,6 @@ def read_dataset(file_path: str) -> pd.DataFrame:
     return data
 
 def generate_summary_statistics(data: pd.DataFrame) -> dict:
-
     if data is None or data.empty:
         raise ValueError("Data cannot be None or empty")
 
@@ -27,15 +25,13 @@ def generate_summary_statistics(data: pd.DataFrame) -> dict:
     return summary
 
 def create_data_visualization(data: pd.DataFrame, file_path: str) -> None:
-
     if data is None or data.empty:
         raise ValueError("Data cannot be None or empty")
 
     data.hist()
     plt.savefig(file_path)
 
-
-def save_summary_to_markdown(summary, file_path):
+def save_summary_to_markdown(summary: dict, file_path: str) -> None:
     with open(file_path, 'w') as f:
         for key, value in summary.items():
             f.write(f"## {key.capitalize()}\n")
