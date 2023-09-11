@@ -28,3 +28,5 @@ jobs:
       
     - name: Run main script
       run: python src/main.py
+      working-directory: src
+
