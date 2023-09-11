@@ -44,11 +44,9 @@ def save_summary_to_markdown(summary, file_path='output/summary.md'):
         f.write("\n")
         
 if __name__ == "__main__":
-    output_dir = 'src/output'
+    output_dir = 'output'
     os.makedirs(output_dir, exist_ok=True)
-
-    data = read_dataset('src/winequality-red.csv') 
+    data = read_dataset('winequality-red.csv') 
     summary = generate_summary_statistics(data)
-    create_data_visualization(data, 'src/output/data_visualization.png')
-    save_summary_to_markdown(summary, 'src/output/summary.md')
-    print(summary)
+    create_data_visualization(data, 'output/data_visualization.png')
+    save_summary_to_markdown(summary, 'output/summary.md')
