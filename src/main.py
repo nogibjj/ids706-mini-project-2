@@ -26,7 +26,7 @@ def generate_summary_statistics(data: pd.DataFrame) -> dict:
 
     return summary
 
-def create_data_visualization(data: pd.DataFrame, file_path: str = 'data_visualization.png') -> None:
+def create_data_visualization(data: pd.DataFrame, file_path: str) -> None:
 
     if data is None or data.empty:
         raise ValueError("Data cannot be None or empty")
@@ -35,7 +35,7 @@ def create_data_visualization(data: pd.DataFrame, file_path: str = 'data_visuali
     plt.savefig(file_path)
 
 
-def save_summary_to_markdown(summary, file_path='output/summary.md'):
+def save_summary_to_markdown(summary, file_path):
     with open(file_path, 'w') as f:
         for key, value in summary.items():
             f.write(f"## {key.capitalize()}\n")
@@ -44,9 +44,9 @@ def save_summary_to_markdown(summary, file_path='output/summary.md'):
         f.write("\n")
         
 if __name__ == "__main__":
-    output_dir = './output'
+    output_dir = 'output'
     os.makedirs(output_dir, exist_ok=True)
-    data = read_dataset('./winequality-red.csv') 
+    data = read_dataset('winequality-red.csv') 
     summary = generate_summary_statistics(data)
-    create_data_visualization(data, './output/data_visualization.png')
-    save_summary_to_markdown(summary, './output/summary.md')
+    create_data_visualization(data, 'output/data_visualization.png')
+    save_summary_to_markdown(summary, 'output/summary.md')
