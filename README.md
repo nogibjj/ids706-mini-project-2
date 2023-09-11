@@ -22,7 +22,7 @@ To initiate tests in this project, execute the following command:
 ```bash
 pytest
 ```
-
+ 
 This command runs all the unit tests and ensures that any changes made haven't introduced new issues.
 
 ## 🛠️ File Structure
