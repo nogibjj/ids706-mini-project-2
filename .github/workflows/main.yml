@@ -48,4 +48,6 @@ jobs:
         git add output/*
         git commit -m "Automatically generated output files" || exit 0
         git remote add origin_with_auth https://$GH_PAT@github.com/$GITHUB_REPOSITORY.git
-        git push --set-upstream origin_with_auth $GITHUB_REF
+        git push --set-upstream origin_with_auth output-files:output-files
+      env:
+        GH_PAT: ${{ secrets.GH_PAT }}
