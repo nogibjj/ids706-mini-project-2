@@ -34,6 +34,15 @@ def create_data_visualization(data: pd.DataFrame, file_path: str = 'data_visuali
     data.hist()
     plt.savefig(file_path)
 
+
+def save_summary_to_markdown(summary, file_path='output/summary.md'):
+    with open(file_path, 'w') as f:
+        for key, value in summary.items():
+            f.write(f"## {key.capitalize()}\n")
+            for sub_key, sub_value in value.items():
+                f.write(f"- {sub_key}: {sub_value}\n")
+        f.write("\n")
+        
 if __name__ == "__main__":
     output_dir = 'output'
     os.makedirs(output_dir, exist_ok=True)
@@ -41,4 +50,5 @@ if __name__ == "__main__":
     data = read_dataset('winequality-red.csv') 
     summary = generate_summary_statistics(data)
     create_data_visualization(data, 'output/data_visualization.png')
+    save_summary_to_markdown(summary)
     print(summary)
