@@ -35,3 +35,8 @@ jobs:
       with:
         name: output-files
         path: src/output/
+
+    - name: List files
+      run: |
+        pwd
+        ls -R  
