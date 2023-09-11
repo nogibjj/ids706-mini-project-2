@@ -28,7 +28,17 @@ def create_data_visualization(data: pd.DataFrame, file_path: str) -> None:
     if data is None or data.empty:
         raise ValueError("Data cannot be None or empty")
 
-    data.hist()
+    num_features = len(data.columns)
+    fig, axes = plt.subplots(nrows=num_features, ncols=1, figsize=(8, 2*num_features))
+
+    for i, feature in enumerate(data.columns):
+        ax = axes[i]
+        ax.hist(data[feature], bins=20) 
+        ax.set_xlabel(f'{feature} values', fontsize=10)  
+        ax.set_ylabel('Frequency', fontsize=10)  
+        ax.set_title(f'Histogram of {feature}', fontsize=12) 
+
+    plt.tight_layout()
     plt.savefig(file_path)
 
 def save_summary_to_markdown(summary: dict, file_path: str) -> None:
