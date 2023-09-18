@@ -1,4 +1,4 @@
-# Python Descriptive Statistics Project
+# Python Descriptive Statistics Project (Pandas)
 
 ![Python CI](https://github.com/nogibjj/ids706-mini-project-2/actions/workflows/main.yml/badge.svg)
 
